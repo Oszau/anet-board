@@ -135,8 +135,8 @@ static const uint8_t A7 = 24;
                                 ( (((p) >=  8) && ((p) <= 15)) ? ((p) - 8) : \
                                 0 ) ) ) )
 
-#define digitalPinToInterrupt(p) ((p) == 10 ? 0 : ((p) == 11 ? 1 : ((p) == 2 ? 2 \
-                                : NOT_AN_INTERRUPT)))	// mega1284p dip
+//#define digitalPinToInterrupt(p) ((p) == 10 ? 0 : ((p) == 11 ? 1 : ((p) == 2 ? 2 : NOT_AN_INTERRUPT)))	// mega1284p dip
+#define digitalPinToInterrupt(p) ((p) >= 18 && (p) <= 20 ? (p) : NOT_AN_INTERRUPT)	// mega1284p dip
 
 #define PA 1
 #define PB 2
